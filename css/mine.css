@@ -1,0 +1,224 @@
+/* header style */
+.page-container {
+    position: relative;
+}
+.main-header {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+}
+.menu-icon {
+    color: white;
+    font-size: 25px;
+}
+.header-navbar {
+    width: 100%;
+}
+.nav-item .item-color {
+    color: white;
+    font-size: 14px;
+}
+.nav-item .item-active {
+    color: yellow;
+    font-size: 14px;
+}
+.search-icon {
+    color: white;
+}
+.nav-divide {
+    background-color: grey;
+    height: 25px;
+    width: 1px;
+}
+/* drop-down style */
+.menu-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 95%;
+    max-width: 1170px;
+    background-color: #1e1e1e;
+    padding: 45px 40px 30px 45px;
+    top: 100%;
+    z-index: 200;
+    color: rgba(255,255,255,0.50);
+    opacity: 0;
+    transform: scaleY(0);
+    transition: ease 1s;
+    transform-origin: top;
+}
+.menu-content ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-content ul li{
+    padding: 4px 0;
+}
+.menu-content ul li a{
+    color: rgba(255,255,255,0.50);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.menu-content ul li a:hover{
+    color: white;
+}
+.my-header-nav li:hover .menu-content{
+    transform: scaleY(1);
+    opacity: 1;
+}
+.navbar-nav .nav-item:hover .nav-link{
+    color: #feec42 !important;
+}
+.navbar-nav .nav-link {
+    font-weight: 600;
+    color: white;
+}
+/* END  */
+.nav-link:hover .menu-content {
+    display: block;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown:hover {
+    cursor: pointer;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* carousel style */
+.my-carousel-indicators .active {
+    background-color: #feec42;
+    transform: scaleY(1.5);
+}
+.my-carousel-indicators li {
+    width: 8px;
+    height: 25px;
+    background-color: white;
+    transition: ease 0.5s;
+    transform: scaleY(1);
+}
+.carousel-image {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(1);
+    transition: all 5000ms linear;
+}
+.carousel-inner .active .carousel-image {
+    transform: scale(1.15);
+}
+.item-box {
+    width: 860px;
+    height: 840px;
+}
+.box-content {
+    background-color: black;
+    opacity: 0.9;
+    padding: 90px 50px 50px 40px;
+    clip-path: polygon(73% 0, 100% 28%, 100% 100%, 0 100%, 0 0);
+}
+.item-content {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+.item-type {
+    color: white;
+    font-size: 16px;
+    transform: scaleY(0);
+    transition: all 2s ease;
+    transform-origin: top;
+    opacity: 0;
+}
+.item-name {
+    color: white;
+    font-size: 50px;
+    transform: scaleY(0);
+    transition: all 2s ease;
+    transform-origin: top;
+    opacity: 0;
+}
+.item-rect {
+    width: 38px;
+    height: 10px;
+    background-color: #feec42;
+    transform: scaleY(0);
+    transition: all 2s ease;
+    transform-origin: top;
+    opacity: 0;
+}
+.item-detail {
+    color: #cccccc;
+    letter-spacing: 1px;
+    line-break: auto;
+    transform: scaleY(0);
+    transition: all 2s ease;
+    transform-origin: top;
+    opacity: 0;
+}
+.item-arrow {
+    color: #ffffff;
+    font-size: 30px;
+    float: right;
+    transform: scaleY(0);
+    transition: all 2s ease;
+    transform-origin: top;
+    opacity: 0;
+}
+.carousel-inner .active .item-content .item-box .box-content .item-type {
+    opacity: 1;
+    transform: scaleY(1);
+}
+.carousel-inner .active .item-content .item-box .box-content .item-name {
+    opacity: 1;
+    transform: scaleY(1);
+}
+.carousel-inner .active .item-content .item-box .box-content .item-rect {
+    opacity: 1;
+    transform: scaleY(1);
+}
+.carousel-inner .active .item-content .item-box .box-content .item-detail {
+    opacity: 1;
+    transform: scaleY(1);
+}
+.carousel-inner .active .item-content .item-box .box-content .item-arrow {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+@media (max-width: 992px) {
+    .main-header {
+        background-color: #222222;
+    }
+    .item-box {
+        padding: 0px;
+    }
+}
+@media (min-width: 992px) {
+    .item-box {
+        padding: 100px;
+    }
+}
